@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QR Code Generator</title>
+    <link rel="stylesheet" href="jennery.css">
+</head>
+<body>
+
+    <h2>QR Code Generator</h2>
+
+    <div class="container">
+        <!-- Input field for the user to enter text or URL -->
+        <input type="text" id="qr-code-value" placeholder="Enter text or URL" aria-label="Enter text or URL">
+
+        <!-- Generate QR code button -->
+        <button id="generate-btn" onclick="generateQRCode()">Generate QR Code</button>
+
+        <!-- QR Code image container -->
+        <div class="qr-code-container">
+            <img id="qr-code-image" alt="Generated QR Code will appear here" />
+        </div>
+
+        <!-- Download Button -->
+        <button id="download-btn" onclick="downloadQRCode()" style="display: none;">Download QR Code</button>
+
+        <!-- Error message -->
+        <p id="error-message" style="color: red; display: none;">Please enter a valid text or URL!</p>
+    </div>
+
+    <!-- Include the QRious library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrious/4.0.2/qrious.min.js"></script>
+
+    <!-- External JS script -->
+    <script src="script.js"></script>
+
+</body>
+</html>
